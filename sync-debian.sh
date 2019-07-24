@@ -10,7 +10,7 @@ LOCK="/tmp/rsync-debian.lock"
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://ftp.fr.debian.org/debian/dists/"
+SOURCE="rsync://ftp.fr.debian.org/debian/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
@@ -67,6 +67,15 @@ rsync --exclude 'alpha*' \
     --exclude 'Contents-mipsel*' \
     --exclude 'Contents-ppc64el*' \
     --exclude 'Contents-s390x*' \
+    --exclude 'Contents-udeb-arm64*' \
+    --exclude 'Contents-udeb-armel*' \
+    --exclude 'Contents-udeb-armhf*' \
+    --exclude 'Contents-udeb-i386*' \
+    --exclude 'Contents-udeb-mips*' \
+    --exclude 'Contents-udeb-mips64el*' \
+    --exclude 'Contents-udeb-mipsel*' \
+    --exclude 'Contents-udeb-ppc64el*' \
+    --exclude 'Contents-udeb-s390x*' \
     -rtlvH \
     --safe-links \
     --bwlimit=${BWLIMIT} \
