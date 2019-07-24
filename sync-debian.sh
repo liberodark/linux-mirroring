@@ -27,8 +27,8 @@ if ! stty &>/dev/null; then
 fi
 
 rsync $rsync_exclude \
-	-rtlvH \
-	--safe-links \
+    -rtlvH \
+    --safe-links \
     --bwlimit=${BWLIMIT} \
     --delete-after --progress \
     -h ${QUIET} \
