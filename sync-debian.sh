@@ -10,7 +10,7 @@ LOCK="/tmp/rsync-debian.lock"
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://ftp.fr.debian.org/debian/"
+SOURCE="rsync://ftp.fr.debian.org/debian/dists/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
@@ -22,24 +22,51 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
-rsync --exclude '*alpha*' \
-    --exclude '*arm*' \
-    --exclude '*armel*' \
-    --exclude '*armhf*' \
-    --exclude '*hppa*' \
-    --exclude '*hurd-i386*' \
-    --exclude '*i386*' \
-    --exclude '*ia64*' \
-    --exclude '*kfreebsd-amd64*' \
-    --exclude '*kfreebsd-i386*' \
-    --exclude '*m68k*' \
-    --exclude '*mipsel*' \
-    --exclude '*powerpc*' \
-    --exclude '*s390*' \
-    --exclude '*s390x*' \
-    --exclude '*sh*' \
-    --exclude '*sparc*' \
-    --exclude '*source*' \
+rsync --exclude 'alpha*' \
+    --exclude 'arm*' \
+    --exclude 'armel*' \
+    --exclude 'armhf*' \
+    --exclude 'hppa*' \
+    --exclude 'hurd-i386*' \
+    --exclude 'i386*' \
+    --exclude 'ia64*' \
+    --exclude 'kfreebsd-amd64*' \
+    --exclude 'kfreebsd-i386*' \
+    --exclude 'm68k*' \
+    --exclude 'mipsel*' \
+    --exclude 'powerpc*' \
+    --exclude 's390*' \
+    --exclude 's390x*' \
+    --exclude 'sh*' \
+    --exclude 'sparc*' \
+    --exclude 'source*' \
+    --exclude 'binary-arm64*' \
+    --exclude 'binary-armel*' \
+    --exclude 'binary-armhf*' \
+    --exclude 'binary-i386*' \
+    --exclude 'binary-mips*' \
+    --exclude 'binary-mips64el*' \
+    --exclude 'binary-mipsel*' \
+    --exclude 'binary-ppc64el*' \
+    --exclude 'binary-s390x*' \
+    --exclude 'installer-arm64*' \
+    --exclude 'installer-armel*' \
+    --exclude 'installer-armhf*' \
+    --exclude 'installer-i386*' \
+    --exclude 'installer-mips*' \
+    --exclude 'installer-mips64el*' \
+    --exclude 'installer-mipsel*' \
+    --exclude 'installer-ppc64el*' \
+    --exclude 'installer-s390x*' \
+    --exclude 'Contents-arm64*' \
+    --exclude 'Contents-armel*' \
+    --exclude 'Contents-armhf*' \
+    --exclude 'Contents-i386*' \
+    --exclude 'Contents-mips*' \
+    --exclude 'Contents-mips64el*' \
+    --exclude 'Contents-mipsel*' \
+    --exclude 'Contents-ppc64el*' \
+    --exclude 'Contents-s390x*' \
     -rtlvH \
     --safe-links \
     --bwlimit=${BWLIMIT} \
