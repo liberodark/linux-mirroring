@@ -23,15 +23,15 @@ if ! stty &>/dev/null; then
 fi
 
 rsync --exclude 'source*' \
-    --exclude '_arm64.deb*' \
-    --exclude '_armel.deb*' \
-    --exclude '_armhf.deb*' \
-    --exclude '_i386.deb*' \
-    --exclude '_mips.deb*' \
-    --exclude '_mips64el.deb*' \
-    --exclude '_mipsel.deb*' \
-    --exclude '_ppc64el.deb*' \
-    --exclude '_s390x.deb*' \
+    --exclude '*_arm64.deb' \
+    --exclude '*_armel.deb' \
+    --exclude '*_armhf.deb' \
+    --exclude '*_i386.deb' \
+    --exclude '*_mips.deb' \
+    --exclude '*_mips64el.deb' \
+    --exclude '*_mipsel.deb' \
+    --exclude '*_ppc64el.deb' \
+    --exclude '*_s390x.deb' \
     --exclude 'binary-arm64*' \
     --exclude 'binary-armel*' \
     --exclude 'binary-armhf*' \
