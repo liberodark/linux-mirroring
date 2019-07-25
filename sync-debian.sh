@@ -22,24 +22,16 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
-rsync #--exclude 'alpha*' \
-    --exclude '*arm64.deb' \
-    --exclude '*armel.deb' \
-    --exclude '*armhf.deb' \
-    #--exclude 'hppa*' \
-    #--exclude 'hurd-i386*' \
-    --exclude '*i386.deb' \
-    --exclude 'ia64*' \
-    #--exclude 'kfreebsd-amd64*' \
-    #--exclude 'kfreebsd-i386*' \
-    #--exclude 'm68k*' \
-    --exclude '*mipsel.deb' \
-    --exclude '*powerpc.deb' \
-    --exclude '*s390.deb' \
-    --exclude '*s390x.deb' \
-    --exclude 'sh*' \
-    --exclude 'sparc*' \
-    --exclude 'source*' \
+rsync --exclude 'source*' \
+    --exclude '_arm64.deb*' \
+    --exclude '_armel.deb*' \
+    --exclude '_armhf.deb*' \
+    --exclude '_i386.deb*' \
+    --exclude '_mips.deb*' \
+    --exclude '_mips64el.deb*' \
+    --exclude '_mipsel.deb*' \
+    --exclude '_ppc64el.deb*' \
+    --exclude '_s390x.deb*' \
     --exclude 'binary-arm64*' \
     --exclude 'binary-armel*' \
     --exclude 'binary-armhf*' \
