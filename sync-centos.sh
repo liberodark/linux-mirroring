@@ -4,13 +4,12 @@ HOME="/tmp/http"
 TARGET="${HOME}/centos"
 TMP="${HOME}/.tmp/centos"
 LOCK="/tmp/rsync-centos.lock"
-#EXCLUDE="${alpha arm armel armhf hppa hurd-i386 i386 ia64 kfreebsd-amd64 kfreebsd-i386 m68k mipsel mips powerpc s390 s390x sh sparc source}"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://centos.mirrors.proxad.net/"
+SOURCE="rsync://ftp.pasteur.fr/mirrors/CentOS/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
