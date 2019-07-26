@@ -21,7 +21,7 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
-rsync --exclude 'iso*' \
+rsync --exclude 'isos' \
     --exclude 'i386*' \
     --exclude '2' \
     --exclude '2.*' \
