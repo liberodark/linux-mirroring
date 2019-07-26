@@ -23,6 +23,16 @@ fi
 
 rsync --exclude 'iso*' \
     --exclude 'i386*' \
+    --exclude '2' \
+    --exclude '2.*' \
+    --exclude '3' \
+    --exclude '3.*' \
+    --exclude '4' \
+    --exclude '4.*' \
+    --exclude '5' \
+    --exclude '5.*' \
+    --exclude '6' \
+    --exclude '6.*' \
     -rtlvH \
     --safe-links \
     --bwlimit=${BWLIMIT} \
