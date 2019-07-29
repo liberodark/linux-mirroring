@@ -26,3 +26,12 @@ Put in crontab :
 * 22 * * * /opt/linux-mirroring/sync-debian-security.sh
 * 23 * * * /opt/linux-mirroring/sync-centos.sh
 ```
+
+# Linux Sync Script
+
+Name | Arch | Size | Version | Status
+---------------- |:------:|:---------:|:--------------:|:-------------:
+**sync-manjaro.sh** | x86/x86_64 | 90 Go | All | Work
+**sync-debian.sh** | x86_64 | 350 Go | All | Work
+**sync-debian-security.sh** | x86_64 | 200 Go | All | Work
+**sync-centos.sh** | x86_64| 100 Go | 7 | Work
