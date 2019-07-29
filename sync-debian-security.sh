@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a sample mirroring script.
 HOME="/tmp/http"
-TARGET="${HOME}/debian"
-TMP="${HOME}/.tmp/debian"
-LOCK="/tmp/rsync-debian.lock"
+TARGET="${HOME}/debian-security"
+TMP="${HOME}/.tmp/debian-security"
+LOCK="/tmp/rsync-debian-security.lock"
 #EXCLUDE="${alpha arm armel armhf hppa hurd-i386 i386 ia64 kfreebsd-amd64 kfreebsd-i386 m68k mipsel mips powerpc s390 s390x sh sparc source}"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
