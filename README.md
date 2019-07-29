@@ -24,4 +24,5 @@ Put in crontab :
 * 19 * * * /opt/linux-mirroring/sync-manjaro.sh
 * 20 * * * /opt/linux-mirroring/sync-debian.sh
 * 22 * * * /opt/linux-mirroring/sync-debian-security.sh
+* 23 * * * /opt/linux-mirroring/sync-centos.sh
 ```
