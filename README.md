@@ -57,7 +57,7 @@ Name | Version | OS
 echo "deb http://domain.com/debian/ jessie main contrib non-free" >> /etc/apt/sources.list
 echo "deb http://domain.com/debian-security/ jessie/updates main contrib non-free" >> /etc/apt/sources.list
 ```
-Manually remove and edit file
+Manually remove and edit file :
 ```
 rm /etc/apt/sources.list
 nano /etc/apt/sources.list
@@ -70,7 +70,7 @@ deb http://domain.com/debian-security/ jessie/updates main contrib non-free
 
 #### Manajro 
 
-Manually remove and edit file
+Manually remove and edit file :
 ```
 rm /etc/pacman.d/mirrorlist
 nano /etc/pacman.d/mirrorlist
@@ -82,7 +82,7 @@ Server = http://domain.com/manjaro/stable/$repo/$arch
 
 #### Centos 
 
-Manually remove and edit file
+Manually remove and edit file :
 ```
 rm /etc/yum.repos.d/*.repo
 nano /etc/yum.repos.d/myrepo.repo
