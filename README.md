@@ -5,8 +5,9 @@ Sync for create mirror of linux
 ### For install scripts :
 
 ```
-yum install git apache2 -y # For Centos
-apt install git httpd -y # For Debian
+yum install git -y # For Centos
+apt install git -y # For Debian
+pamac install git # For Manjaro
 cd /opt/
 git clone https://github.com/liberodark/linux-mirroring/
 cd linux-mirroring/
