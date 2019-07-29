@@ -46,6 +46,7 @@ Name | Version | OS
 **deb http://domain.com/debian/ stretch main contrib non-free** | 9.x | Debian
 **deb http://domain.com/debian/ buster main contrib non-free** | 10.x | Debian
 **deb http://domain.com/debian/ bullseye main contrib non-free** | 11.x | Debian
+**baseurl=http://domain.com/centos/$releasever/os/$basearch/** | 7.x | Centos
 
 
 ### Install Repo :
