@@ -37,8 +37,7 @@ Name | Arch | Size | Version | Status
 **sync-centos.sh** | x86_64| 100 Go | 7 | Work
 
 
-
-### Linux Repo
+### Exemple of Linux Repo
 
 Name | Version | OS
 ---------------- |:------:|:---------:
