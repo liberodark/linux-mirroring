@@ -27,7 +27,7 @@ Put in crontab :
 * 23 * * * /opt/linux-mirroring/sync-centos.sh
 ```
 
-# Linux Sync Script
+### Linux Sync Script
 
 Name | Arch | Size | Version | Status
 ---------------- |:------:|:---------:|:--------------:|:-------------:
