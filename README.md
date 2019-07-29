@@ -5,8 +5,8 @@ Sync for create mirror of linux
 ### For install scripts :
 
 ```
-yum install git -y # For Centos
-apt install git -y # For Debian
+yum install git httpd -y # For Centos
+apt install git httpd -y # For Debian
 cd /opt/
 git clone https://github.com/liberodark/linux-mirroring/
 cd linux-mirroring/
