@@ -25,6 +25,7 @@ fi
 rsync --exclude 'source*' \
     --exclude '*.debian.tar.xz' \
     --exclude '*.orig.tar.xz' \
+    --exclude '*.orig.tar.bz2' \
     --exclude '*.dsc' \
     --exclude '*_arm64.deb' \
     --exclude '*_armel.deb' \
