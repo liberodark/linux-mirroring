@@ -2,7 +2,7 @@
 Sync for create mirror of linux
 
 
-For install scripts :
+### For install scripts :
 
 ```
 yum install git -y # For Centos
@@ -13,7 +13,7 @@ cd linux-mirroring/
 chmod +x *.sh
 ```
 
-For make sync in auto :
+### For make sync in auto :
 
 Run in terminal :
 ```
