@@ -35,7 +35,7 @@ Name | Arch | Size | Version | Status
 **sync-manjaro.sh** | x86/x86_64 | 90 Go | All | Work
 **sync-debian.sh** | x86_64 | 350 Go | All | Work
 **sync-debian-security.sh** | x86_64 | 40 Go | All | Work
-**sync-centos.sh** | x86_64| 100 Go | 7 | Work
+**sync-centos.sh** | x86_64| 90 Go | 7 | Work
 
 
 ### Exemple of Linux Repo
