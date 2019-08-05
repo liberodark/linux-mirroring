@@ -72,6 +72,7 @@ rsync --exclude 'source*' \
     --exclude 'Contents-udeb-mipsel*' \
     --exclude 'Contents-udeb-ppc64el*' \
     --exclude 'Contents-udeb-s390x*' \
+    --delete-excluded \
     -rtlvH \
     --safe-links \
     --bwlimit=${BWLIMIT} \
