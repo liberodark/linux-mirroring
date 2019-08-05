@@ -24,6 +24,7 @@ fi
 rsync --exclude 'testing' \
     --exclude 'unstable' \
     --exclude 'x32-*' \
+    --delete-excluded \
     -rtlvH \
     --safe-links \
     --bwlimit=${BWLIMIT} \
