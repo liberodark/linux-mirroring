@@ -23,7 +23,9 @@ fi
 
 rsync --exclude 'testing' \
     --exclude 'unstable' \
-    --exclude 'x32-*' \
+    --exclude 'x32-stable' \
+    --exclude 'x32-testing' \
+    --exclude 'x32-unstable' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
