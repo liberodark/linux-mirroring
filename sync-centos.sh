@@ -33,6 +33,7 @@ rsync --exclude 'isos' \
     --exclude '5.*' \
     --exclude '6' \
     --exclude '6.*' \
+    --delete-excluded \
     -rtlvH \
     --safe-links \
     --bwlimit=${BWLIMIT} \
