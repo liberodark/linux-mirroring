@@ -21,11 +21,18 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
-rsync -rtlvH --safe-links \
+rsync --exclude 'testing' \
+    --exclude 'unstable' \
+    --exclude 'x32-*' \
+    -rtlvH \
+    --safe-links \
     --bwlimit=${BWLIMIT} \
     --delete-after --progress \
-    -h ${QUIET} --timeout=600 --contimeout=120 -p \
-    --delay-updates --no-motd \
+    -h ${QUIET} \
+    --timeout=600 \
+    --contimeout=120 -p \
+    --delay-updates \
+    --no-motd \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
