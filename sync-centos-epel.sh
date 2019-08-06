@@ -1,15 +1,15 @@
 #!/bin/sh
 # This is a sample mirroring script.
 HOME="/tmp/http"
-TARGET="${HOME}/centos"
-TMP="${HOME}/.tmp/centos"
-LOCK="/tmp/rsync-centos.lock"
+TARGET="${HOME}/epel"
+TMP="${HOME}/.tmp/epel"
+LOCK="/tmp/rsync-epel.lock"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://ftp.pasteur.fr/mirrors/CentOS/"
+SOURCE="rsync://dl.fedoraproject.org/pub/epel/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
