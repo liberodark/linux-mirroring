@@ -22,10 +22,11 @@ crontab -e
 ```
 Put in crontab :
 ```
-* 19 * * * /opt/linux-mirroring/sync-manjaro.sh
-* 20 * * * /opt/linux-mirroring/sync-debian.sh
-* 22 * * * /opt/linux-mirroring/sync-debian-security.sh
-* 23 * * * /opt/linux-mirroring/sync-centos.sh
+0 19 * * * /opt/linux-mirroring/sync-manjaro.sh
+0 20 * * * /opt/linux-mirroring/sync-debian.sh
+0 22 * * * /opt/linux-mirroring/sync-debian-security.sh
+0 23 * * * /opt/linux-mirroring/sync-centos.sh
+0 0 * * * /opt/linux-mirroring/sync-centos-epel.sh
 ```
 
 ### Linux Sync Script
@@ -36,6 +37,7 @@ Name | Arch | Size | Version | Status
 **sync-debian.sh** | x86_64 | 350 Go | All | Work
 **sync-debian-security.sh** | x86_64 | 40 Go | All | Work
 **sync-centos.sh** | x86_64| 90 Go | 7 | Work
+**sync-centos-epel.sh** | x86_64| 90 Go | 7 | Work
 
 
 ### Exemple of Linux Repo
