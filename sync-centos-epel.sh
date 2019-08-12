@@ -9,7 +9,7 @@ LOCK="/tmp/rsync-epel.lock"
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://dl.fedoraproject.org/pub/epel/"
+SOURCE="rsync://mir01.syntis.net/epel"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
