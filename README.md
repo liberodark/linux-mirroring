@@ -48,6 +48,7 @@ Name | Version | OS
 **deb http://domain.com/debian/ buster main contrib non-free** | 10.x | Debian
 **deb http://domain.com/debian/ bullseye main contrib non-free** | 11.x | Debian
 **baseurl=http://domain.com/centos/$releasever/os/$basearch/** | 7.x | Centos
+**baseurl=http://domain.com/epel/7/$basearch/** | 7.x | Centos EPEL
 
 
 ### Install Repo :
@@ -125,7 +126,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 [epel]
 name=Extra Packages for Enterprise Linux 7 - $basearch
 #metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
-baseurl=http://domain.com/epel/7/$basearch/debug
+baseurl=http://domain.com/epel/7/$basearch/
 failovermethod=priority
 enabled=1
 gpgcheck=1
@@ -134,7 +135,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 [epel-debuginfo]
 name=Extra Packages for Enterprise Linux 7 - $basearch - Debug
 #metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-7&arch=$basearch
-baseurl=http://domain.com/epel/7/$basearch/debug
+baseurl=http://domain.com/epel/7/$basearch/debug/
 failovermethod=priority
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
@@ -143,7 +144,7 @@ gpgcheck=1
 [epel-source]
 name=Extra Packages for Enterprise Linux 7 - $basearch - Source
 #metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-7&arch=$basearch
-baseurl=http://domain.com/epel/7/$basearch/SRPMS
+baseurl=http://domain.com/epel/7/$basearch/SRPMS/
 failovermethod=priority
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
