@@ -34,7 +34,7 @@ Put in crontab :
 Name | Arch | Size | Version | Status
 ---------------- |:------:|:---------:|:--------------:|:-------------:
 **sync-manjaro.sh** | x86_64 | 91 Go | Stable | Work
-**sync-debian.sh** | x86_64 | 350 Go | All | Work
+**sync-debian.sh** | x86_64 | 483 Go | All | Work
 **sync-debian-security.sh** | x86_64 | 45 Go | All | Work
 **sync-centos.sh** | x86_64| 109 Go | 7 | Work
 **sync-centos-epel.sh** | x86_64| 90 Go | 7 | Work
