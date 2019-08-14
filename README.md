@@ -142,13 +142,4 @@ failovermethod=priority
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 gpgcheck=1
-
-[epel-source]
-name=Extra Packages for Enterprise Linux 7 - $basearch - Source
-#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-7&arch=$basearch
-baseurl=http://domain.com/epel/7/$basearch/SRPMS/
-failovermethod=priority
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
-gpgcheck=1
 ```
