@@ -133,13 +133,4 @@ failovermethod=priority
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
-
-[epel-debuginfo]
-name=Extra Packages for Enterprise Linux 7 - $basearch - Debug
-#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-7&arch=$basearch
-baseurl=http://domain.com/epel/7/$basearch/debug/
-failovermethod=priority
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
-gpgcheck=1
 ```
