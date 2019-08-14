@@ -90,6 +90,7 @@ Manually remove and edit file :
 ```
 rm /etc/yum.repos.d/*.repo
 nano /etc/yum.repos.d/myrepo.repo
+curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 http://domain.com/epel/RPM-GPG-KEY-EPEL-7
 ```
 Copy and past in file :
 ```
