@@ -1,6 +1,6 @@
 #!/bin/sh
 # This is a sample mirroring script.
-HOME="/tmp/http"
+HOME="/var/www/mirror"
 TARGET="${HOME}/epel"
 TMP="${HOME}/.tmp/epel"
 LOCK="/tmp/rsync-epel.lock"
@@ -32,6 +32,11 @@ rsync --exclude '4' \
     --exclude '6Server' \
     --exclude 'playground' \
     --exclude 'testing' \
+    --exclude 'SRPMS' \
+    --exclude 'aarch64' \
+    --exclude 'ppc64' \
+    --exclude 'ppc64le' \
+    --exclude 's390x' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
