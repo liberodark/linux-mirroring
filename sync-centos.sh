@@ -22,6 +22,7 @@ if ! stty &>/dev/null; then
 fi
 
 rsync --exclude 'isos' \
+    --exclude '*.iso' \
     --exclude 'i386*' \
     --exclude '2' \
     --exclude '2.*' \
