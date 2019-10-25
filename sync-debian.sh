@@ -23,6 +23,7 @@ if ! stty &>/dev/null; then
 fi
 
 rsync --exclude 'source*' \
+    --exclude '*.iso' \
     --exclude '*.debian.tar.xz' \
     --exclude '*.orig.tar.xz' \
     --exclude '*.orig.tar.bz2' \
