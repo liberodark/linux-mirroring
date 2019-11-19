@@ -21,22 +21,27 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
-rsync --exclude '4' \
-    --exclude '4AS' \
-    --exclude '4ES' \
-    --exclude '4WS' \
-    --exclude '5' \
-    --exclude '5Client' \
-    --exclude '5Server' \
-    --exclude '6' \
-    --exclude '6Server' \
-    --exclude 'playground' \
-    --exclude 'testing' \
-    --exclude 'SRPMS' \
-    --exclude 'aarch64' \
-    --exclude 'ppc64' \
-    --exclude 'ppc64le' \
-    --exclude 's390x' \
+rsync --exclude 'test' \
+    --exclude 'test70' \
+    --exclude 'test71' \
+    --exclude 'test72' \
+    --exclude 'test73' \
+    --exclude 'test74' \
+    --exclude 'debug-php55' \
+    --exclude 'debug-php56' \
+    --exclude 'debug-php70' \
+    --exclude 'debug-php71' \
+    --exclude 'debug-php72' \
+    --exclude 'debug-php73' \
+    --exclude 'debug-php74' \
+    --exclude 'debug-remi' \
+    --exclude 'debug-test' \
+    --exclude 'debug-test70' \
+    --exclude 'debug-test71' \
+    --exclude 'debug-test72' \
+    --exclude 'debug-test73' \
+    --exclude 'debug-test74' \
+    --exclude 'modular-test' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
