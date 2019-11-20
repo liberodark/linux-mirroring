@@ -3,7 +3,7 @@
 HOME="/var/www/mirror"
 TARGET="${HOME}/mariadb"
 TMP="${HOME}/.tmp/mariadb"
-LOCK="/tmp/rsync-mariadb.lock"
+LOCK="/tmp/wget-mariadb.lock"
 
 SOURCE="http://yum.mariadb.org/10.4/centos7-amd64"
 
@@ -17,8 +17,10 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
+pushd "${TARGET}" || exit
 wget --mirror \
     --no-parent \
+    --cut-dirs=1 \
     --exclude-directories='/10.4/centos6-amd64' \
     --exclude-directories='/10.4/centos7-aarch64' \
     --exclude-directories='/10.4/centos7-ppc64' \
@@ -35,9 +37,5 @@ wget --mirror \
     --exclude-directories='/10.4/centos/*/aarch64' \
     --exclude-directories='/10.4/centos/*/ppc64' \
     --exclude-directories='/10.4/centos/*/ppc64le' \
-    ${SOURCE}
-
-pushd yum.mariadb.org/10.4/ || exit
-sudo mv * "${TARGET}"
+    ${SOURCE} 
 popd || exit
-sudo rm -r yum.mariadb.org
