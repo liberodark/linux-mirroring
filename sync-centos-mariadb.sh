@@ -33,5 +33,6 @@ wget --mirror \
     --exclude-directories='/10.4/centos/*/aarch64' \
     --exclude-directories='/10.4/centos/*/ppc64' \
     --exclude-directories='/10.4/centos/*/ppc64le' \
-    ${SOURCE} 
+    ${SOURCE}
+sudo rm yum.mariadb.org/index.html
 popd || exit
