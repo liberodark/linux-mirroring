@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # This is a sample mirroring script.
 HOME="/var/www/mirror"
 TARGET="${HOME}/mariadb"
@@ -12,10 +12,6 @@ SOURCE="http://yum.mariadb.org/10.4/centos7-amd64"
 
 exec 9>"${LOCK}"
 flock -n 9 || exit
-
-if ! stty &>/dev/null; then
-    QUIET="-q"
-fi
 
 pushd "${TARGET}" || exit
 wget --mirror \
