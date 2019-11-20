@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # This is a sample mirroring script.
 HOME="/var/www/mirror"
 TARGET="${HOME}/epel"

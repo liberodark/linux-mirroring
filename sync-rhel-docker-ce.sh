@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # This is a sample mirroring script.
 HOME="/tmp/http"
 TARGET="${HOME}/docker"
@@ -12,10 +12,6 @@ SOURCE="https://download.docker.com/linux/centos/7/x86_64/stable/"
 
 exec 9>"${LOCK}"
 flock -n 9 || exit
-
-if ! stty &>/dev/null; then
-    QUIET="-q"
-fi
 
 wget --mirror \
     --no-parent \
