@@ -13,10 +13,10 @@ SOURCE="https://shibboleth-mirror.cdi.ti.ja.net/CentOS_7/"
 exec 9>"${LOCK}"
 flock -n 9 || exit
 
-#pushd "${TARGET}" || exit
+pushd "${TARGET}" || exit
 wget --mirror \
     --no-parent \
     --cut-dirs=1 \
     ${SOURCE}
 sudo rm -r shibboleth-mirror.cdi.ti.ja.net/index.html*
-#popd || exit
+popd || exit
