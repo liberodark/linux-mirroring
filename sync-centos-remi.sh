@@ -42,6 +42,8 @@ rsync --exclude 'test' \
     --exclude 'debug-test73' \
     --exclude 'debug-test74' \
     --exclude 'modular-test' \
+    --exclude 'aarch64' \
+    --exclude 'armhfp' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
