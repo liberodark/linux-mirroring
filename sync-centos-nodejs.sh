@@ -20,4 +20,5 @@ wget --mirror \
     --exclude-directories='/pub_13.x/el/6' \
     ${SOURCE}
 sudo rm rpm.nodesource.com/index.html
+sudo rm rpm.nodesource.com/*/nodesource-release-*
 popd || exit
