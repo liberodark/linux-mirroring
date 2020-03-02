@@ -1,6 +1,6 @@
 #!/bin/bash
 # This is a sample mirroring script.
-HOME="/tmp/www/mirror"
+HOME="/var/www/mirror"
 TARGET="${HOME}/rsyslog"
 TMP="${HOME}/.tmp/rsyslog"
 LOCK="/tmp/rsync-rsyslog.lock"
