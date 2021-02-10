@@ -35,6 +35,7 @@ rsync --exclude 'test' \
     --exclude 'debug-php72' \
     --exclude 'debug-php73' \
     --exclude 'debug-php74' \
+    --exclude 'debug-php80' \
     --exclude 'debug-remi' \
     --exclude 'debug-test' \
     --exclude 'debug-test70' \
