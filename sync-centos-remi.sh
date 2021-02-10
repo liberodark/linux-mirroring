@@ -27,6 +27,7 @@ rsync --exclude 'test' \
     --exclude 'test72' \
     --exclude 'test73' \
     --exclude 'test74' \
+    --exclude 'test80' \
     --exclude 'debug-php55' \
     --exclude 'debug-php56' \
     --exclude 'debug-php70' \
@@ -41,6 +42,7 @@ rsync --exclude 'test' \
     --exclude 'debug-test72' \
     --exclude 'debug-test73' \
     --exclude 'debug-test74' \
+    --exclude 'debug-test80' \
     --exclude 'modular-test' \
     --exclude 'aarch64' \
     --exclude 'armhfp' \
