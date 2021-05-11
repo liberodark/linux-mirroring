@@ -1,6 +1,6 @@
 #!/bin/bash
 # This is a sample mirroring script.
-HOME="/tmp/http"
+HOME="/var/www/mirror"
 TARGET="${HOME}/alma"
 TMP="${HOME}/.tmp/alma"
 LOCK="/tmp/rsync-alma.lock"
