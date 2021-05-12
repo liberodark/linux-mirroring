@@ -23,6 +23,8 @@ fi
 
 rsync --exclude 'isos' \
     --exclude '*.iso' \
+    --exclude '8.*-beta' \
+    --exclude '8.*-rc' \
     --exclude 'i386*' \
     --delete-excluded \
     -rtlvH \
