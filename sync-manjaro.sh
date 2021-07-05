@@ -30,6 +30,7 @@ rsync --exclude 'stable-staging' \
     --exclude 'arm-stable' \
     --exclude 'arm-testing' \
     --exclude 'arm-unstable' \
+    --exclude 'kde-unstable' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
