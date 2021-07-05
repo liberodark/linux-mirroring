@@ -23,6 +23,7 @@ fi
 
 rsync --exclude 'testing' \
     --exclude 'unstable' \
+    --exclude 'stable-staging' \
     --exclude 'x32-stable' \
     --exclude 'x32-testing' \
     --exclude 'x32-unstable' \
