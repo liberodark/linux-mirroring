@@ -27,6 +27,8 @@ rsync --exclude 'isos' \
     --exclude '8.*-rc' \
     --exclude 'i386*' \
     --exclude 'aarch64'	\
+    --exclude 'Source'	\
+    --exclude 'debug'	\
     --delete-excluded \
     -rtlvH \
     --safe-links \
