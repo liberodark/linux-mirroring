@@ -26,6 +26,9 @@ rsync --exclude 'testing' \
     --exclude 'x32-stable' \
     --exclude 'x32-testing' \
     --exclude 'x32-unstable' \
+    --exclude 'arm-stable' \
+    --exclude 'arm-testing' \
+    --exclude 'arm-unstable' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
