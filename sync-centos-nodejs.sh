@@ -4,6 +4,7 @@ HOME="/var/www/mirror"
 TARGET="${HOME}/nodejs"
 TMP="${HOME}/.tmp/nodejs"
 LOCK="/tmp/rsync-nodejs.lock"
+USER="apache"
 
 SOURCE="https://rpm.nodesource.com/pub_13.x/el/"
 
@@ -22,3 +23,4 @@ wget --mirror \
 sudo rm rpm.nodesource.com/index.html
 sudo rm rpm.nodesource.com/*/nodesource-release-*
 popd || exit
+chown -R "$USER": /var/www/mirror/
