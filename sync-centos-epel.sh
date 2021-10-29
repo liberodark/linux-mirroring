@@ -38,6 +38,7 @@ rsync --exclude '4' \
     --exclude 'ppc64' \
     --exclude 'ppc64le' \
     --exclude 's390x' \
+    --exclude 'debug' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
@@ -52,4 +53,4 @@ rsync --exclude '4' \
     ${SOURCE} \
     "${TARGET}"
 
-chown -R "$USER": /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"

@@ -1,15 +1,16 @@
 #!/bin/bash
 # This is a sample mirroring script.
-HOME="/tmp/http"
+HOME="/var/www/mirror"
 TARGET="${HOME}/manjaro"
 TMP="${HOME}/.tmp/manjaro"
 LOCK="/tmp/rsync-manjaro.lock"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://mirrorservice.org/repo.manjaro.org/repos/"
+SOURCE="rsync://ftp.halifax.rwth-aachen.de/manjaro/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
@@ -31,6 +32,7 @@ rsync --exclude 'stable-staging' \
     --exclude 'arm-testing' \
     --exclude 'arm-unstable' \
     --exclude 'kde-unstable' \
+    --exclude 'sync-arm' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
@@ -44,3 +46,5 @@ rsync --exclude 'stable-staging' \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
+
+chown -R "$USER":"$USER" "$HOME"

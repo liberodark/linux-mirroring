@@ -1,9 +1,10 @@
 #!/bin/bash
 # This is a sample mirroring script.
-HOME="/tmp/http"
-TARGET="${HOME}/docker"
+HOME="/var/www/mirror"
+TARGET="${HOME}/docker/centos/7"
 TMP="${HOME}/.tmp/docker"
 LOCK="/tmp/docker.lock"
+USER="apache"
 
 SOURCE="https://download.docker.com/linux/centos/7/x86_64/stable/"
 
@@ -19,6 +20,7 @@ wget --mirror \
     ${SOURCE}
 
 pushd download.docker.com || exit
-sudo mv * "${TARGET}"
+sudo cp -a * "${TARGET}"
 popd || exit
 sudo rm -r download.docker.com
+chown -R "$USER":"$USER" "$HOME"

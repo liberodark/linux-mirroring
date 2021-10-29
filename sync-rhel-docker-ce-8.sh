@@ -1,12 +1,12 @@
 #!/bin/bash
 # This is a sample mirroring script.
 HOME="/var/www/mirror"
-TARGET="${HOME}/shibboleth"
-TMP="${HOME}/.tmp/shibboleth"
-LOCK="/tmp/rsync-shibboleth.lock"
+TARGET="${HOME}/docker/centos/8"
+TMP="${HOME}/.tmp/docker"
+LOCK="/tmp/docker.lock"
 USER="apache"
 
-SOURCE="https://shibboleth-mirror.cdi.ti.ja.net/CentOS_7/"
+SOURCE="https://download.docker.com/linux/centos/8/x86_64/stable/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
@@ -14,12 +14,13 @@ SOURCE="https://shibboleth-mirror.cdi.ti.ja.net/CentOS_7/"
 exec 9>"${LOCK}"
 flock -n 9 || exit
 
-pushd "${TARGET}" || exit
 wget --mirror \
     --no-parent \
-    --cut-dirs=1 \
+    --cut-dirs=5 \
     ${SOURCE}
-sudo rm -r shibboleth-mirror.cdi.ti.ja.net/index.html*
-popd || exit
 
+pushd download.docker.com || exit
+sudo cp -a * "${TARGET}"
+popd || exit
+sudo rm -r download.docker.com
 chown -R "$USER":"$USER" "$HOME"

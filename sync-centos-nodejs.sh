@@ -23,4 +23,4 @@ wget --mirror \
 sudo rm rpm.nodesource.com/index.html
 sudo rm rpm.nodesource.com/*/nodesource-release-*
 popd || exit
-chown -R "$USER": /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"

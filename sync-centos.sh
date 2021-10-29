@@ -4,6 +4,7 @@ HOME="/tmp/http"
 TARGET="${HOME}/centos"
 TMP="${HOME}/.tmp/centos"
 LOCK="/tmp/rsync-centos.lock"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
@@ -47,3 +48,5 @@ rsync --exclude 'isos' \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
+
+chown -R "$USER":"$USER" "$HOME"

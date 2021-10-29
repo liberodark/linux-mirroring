@@ -44,4 +44,4 @@ rsync --exclude 'isos' \
     ${SOURCE} \
     "${TARGET}"
 
-chown -R "$USER": /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"

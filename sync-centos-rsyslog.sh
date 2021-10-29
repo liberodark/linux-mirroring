@@ -29,4 +29,4 @@ wget --mirror \
 rm -f rpms.adiscon.com/rsyslog.repo
 rm -rf rpms.adiscon.com/index.html*
 popd || exit
-chown -R "$USER": /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"

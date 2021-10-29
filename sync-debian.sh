@@ -1,10 +1,10 @@
 #!/bin/bash
 # This is a sample mirroring script.
-HOME="/tmp/http"
+HOME="/var/www/mirror"
 TARGET="${HOME}/debian"
 TMP="${HOME}/.tmp/debian"
 LOCK="/tmp/rsync-debian.lock"
-#EXCLUDE="${alpha arm armel armhf hppa hurd-i386 i386 ia64 kfreebsd-amd64 kfreebsd-i386 m68k mipsel mips powerpc s390 s390x sh sparc source}"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
@@ -86,3 +86,5 @@ rsync --exclude 'source*' \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
+
+chown -R "$USER":"$USER" "$HOME"

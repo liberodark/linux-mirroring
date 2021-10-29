@@ -62,4 +62,4 @@ rsync --exclude 'test' \
     ${SOURCE} \
     "${TARGET}"
 
-chown -R "$USER": /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"

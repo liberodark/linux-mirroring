@@ -37,4 +37,4 @@ wget --mirror \
     ${SOURCE}
 sudo rm yum.mariadb.org/index.html
 popd || exit
-chown -R "$USER": /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"

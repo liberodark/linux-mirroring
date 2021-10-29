@@ -1,9 +1,10 @@
 #!/bin/bash
 # This is a sample mirroring script.
-HOME="/tmp/http"
+HOME="/var/www/mirror"
 TARGET="${HOME}/debian"
 TMP="${HOME}/.tmp/debian"
 LOCK="/tmp/rsync-debian.lock"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
@@ -29,3 +30,5 @@ rsync -rtlvH --safe-links \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
+
+chown -R "$USER":"$USER" "$HOME"
