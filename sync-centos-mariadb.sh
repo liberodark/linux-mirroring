@@ -4,6 +4,7 @@ HOME="/var/www/mirror"
 TARGET="${HOME}/mariadb"
 TMP="${HOME}/.tmp/mariadb"
 LOCK="/tmp/wget-mariadb.lock"
+USER="apache"
 
 SOURCE="http://yum.mariadb.org/10.5/centos7-amd64"
 
@@ -36,3 +37,4 @@ wget --mirror \
     ${SOURCE}
 sudo rm yum.mariadb.org/index.html
 popd || exit
+chown -R "$USER": /var/www/mirror/
