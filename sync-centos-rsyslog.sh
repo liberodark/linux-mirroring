@@ -4,6 +4,7 @@ HOME="/var/www/mirror"
 TARGET="${HOME}/rsyslog"
 TMP="${HOME}/.tmp/rsyslog"
 LOCK="/tmp/rsync-rsyslog.lock"
+USER="apache"
 
 SOURCE="http://rpms.adiscon.com/v8-stable/"
 
@@ -28,3 +29,4 @@ wget --mirror \
 rm -f rpms.adiscon.com/rsyslog.repo
 rm -rf rpms.adiscon.com/index.html*
 popd || exit
+chown -R "$USER": /var/www/mirror/
