@@ -4,6 +4,7 @@ HOME="/var/www/mirror"
 TARGET="${HOME}/alma"
 TMP="${HOME}/.tmp/alma"
 LOCK="/tmp/rsync-alma.lock"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
@@ -42,3 +43,5 @@ rsync --exclude 'isos' \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
+
+chown -R "$USER": /var/www/mirror/
