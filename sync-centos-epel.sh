@@ -4,6 +4,7 @@ HOME="/var/www/mirror"
 TARGET="${HOME}/epel"
 TMP="${HOME}/.tmp/epel"
 LOCK="/tmp/rsync-epel.lock"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
@@ -50,3 +51,5 @@ rsync --exclude '4' \
     --temp-dir="${TMP}" \
     ${SOURCE} \
     "${TARGET}"
+
+chown -R "$USER": /var/www/mirror/
