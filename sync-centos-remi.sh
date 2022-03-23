@@ -1,7 +1,7 @@
 #!/bin/bash
 # This is a sample mirroring script.
 HOME="/var/www/mirror"
-TARGET="${HOME}/remi"
+TARGET="${HOME}/remi7"
 TMP="${HOME}/.tmp/remi"
 LOCK="/tmp/rsync-remi.lock"
 USER="apache"
@@ -29,6 +29,7 @@ rsync --exclude 'test' \
     --exclude 'test73' \
     --exclude 'test74' \
     --exclude 'test80' \
+    --exclude 'test81' \
     --exclude 'debug-php55' \
     --exclude 'debug-php56' \
     --exclude 'debug-php70' \
@@ -37,6 +38,7 @@ rsync --exclude 'test' \
     --exclude 'debug-php73' \
     --exclude 'debug-php74' \
     --exclude 'debug-php80' \
+    --exclude 'debug-php81' \
     --exclude 'debug-remi' \
     --exclude 'debug-test' \
     --exclude 'debug-test70' \
@@ -45,6 +47,8 @@ rsync --exclude 'test' \
     --exclude 'debug-test73' \
     --exclude 'debug-test74' \
     --exclude 'debug-test80' \
+    --exclude 'debug-test81' \
+    --exclude 'debug-modular-test' \
     --exclude 'modular-test' \
     --exclude 'aarch64' \
     --exclude 'armhfp' \
