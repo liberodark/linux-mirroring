@@ -4,6 +4,7 @@ HOME="/var/www/mirror"
 TARGET="${HOME}/remi"
 TMP="${HOME}/.tmp/remi"
 LOCK="/tmp/rsync-remi.lock"
+USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
