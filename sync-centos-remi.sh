@@ -1,16 +1,15 @@
 #!/bin/bash
 # This is a sample mirroring script.
 HOME="/var/www/mirror"
-TARGET="${HOME}/remi7"
+TARGET="${HOME}/remi"
 TMP="${HOME}/.tmp/remi"
 LOCK="/tmp/rsync-remi.lock"
-USER="apache"
 
 # NOTE: You'll probably want to change this or remove the --bwlimit setting in
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://fr2.rpmfind.net/linux/remi/enterprise/7/"
+SOURCE="rsync://fr2.rpmfind.net/linux/remi/enterprise/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
@@ -22,33 +21,39 @@ if ! stty &>/dev/null; then
     QUIET="-q"
 fi
 
-rsync --exclude 'test' \
-    --exclude 'test70' \
-    --exclude 'test71' \
-    --exclude 'test72' \
-    --exclude 'test73' \
-    --exclude 'test74' \
-    --exclude 'test80' \
-    --exclude 'test81' \
-    --exclude 'debug-php55' \
-    --exclude 'debug-php56' \
-    --exclude 'debug-php70' \
-    --exclude 'debug-php71' \
-    --exclude 'debug-php72' \
-    --exclude 'debug-php73' \
-    --exclude 'debug-php74' \
-    --exclude 'debug-php80' \
-    --exclude 'debug-php81' \
+rsync --exclude 'test*' \
+    --exclude '2' \
+    --exclude '2.*' \
+    --exclude '3' \
+    --exclude '3.*' \
+    --exclude '4' \
+    --exclude '4.*' \
+    --exclude '5' \
+    --exclude '5.*' \
+    --exclude '5Client' \
+    --exclude '5Server' \
+    --exclude '6' \
+    --exclude '6.*' \
+    --exclude '6Client' \
+    --exclude '6Server' \
+    --exclude '6Workstation' \
+    --exclude '6Workstation' \
+    --exclude '7.3' \
+    --exclude '7.4' \
+    --exclude '7.5' \
+    --exclude '7.6' \
+    --exclude '7.7' \
+    --exclude '7Client' \
+    --exclude '7Server' \
+    --exclude '7Workstation' \
+    --exclude '7Workstation' \
+    --exclude '6.*' \
+    --exclude 'composer2-test' \
+    --exclude 'debug-modular*' \
+    --exclude 'debug-php*' \
+    --exclude 'debug-redis*' \
     --exclude 'debug-remi' \
-    --exclude 'debug-test' \
-    --exclude 'debug-test70' \
-    --exclude 'debug-test71' \
-    --exclude 'debug-test72' \
-    --exclude 'debug-test73' \
-    --exclude 'debug-test74' \
-    --exclude 'debug-test80' \
-    --exclude 'debug-test81' \
-    --exclude 'debug-modular-test' \
+    --exclude 'debug-test*' \
     --exclude 'modular-test' \
     --exclude 'aarch64' \
     --exclude 'armhfp' \
@@ -66,4 +71,4 @@ rsync --exclude 'test' \
     ${SOURCE} \
     "${TARGET}"
 
-chown -R "$USER":"$USER" "$HOME"
+chown -R apache: /var/www/mirror/
