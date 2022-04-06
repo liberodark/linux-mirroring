@@ -29,6 +29,9 @@ rsync --exclude 'test*' \
     --exclude '3.*' \
     --exclude '4' \
     --exclude '4.*' \
+    --exclude '4AS' \
+    --exclude '4ES' \
+    --exclude '4WS' \
     --exclude '5' \
     --exclude '5.*' \
     --exclude '5Client' \
@@ -56,8 +59,11 @@ rsync --exclude 'test*' \
     --exclude 'debug-remi' \
     --exclude 'debug-test*' \
     --exclude 'modular-test' \
+    --exclude 'remi-release*' \
+    --exclude 'remi*.repo' \
     --exclude 'aarch64' \
     --exclude 'armhfp' \
+    --exclude 'i386' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
