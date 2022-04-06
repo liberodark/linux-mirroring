@@ -71,4 +71,4 @@ rsync --exclude 'test*' \
     ${SOURCE} \
     "${TARGET}"
 
-chown -R apache: /var/www/mirror/
+chown -R "$USER":"$USER" "$HOME"
