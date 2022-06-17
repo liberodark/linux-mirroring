@@ -30,6 +30,7 @@ rsync --exclude 'isos' \
     --exclude 'aarch64'	\
     --exclude 'ppc64le'	\
     --exclude 's390x'	\
+    --exclude 'raspberrypi' \
     --exclude 'Source'	\
     --exclude 'debug'	\
     --delete-excluded \
