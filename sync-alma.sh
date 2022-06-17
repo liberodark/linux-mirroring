@@ -10,7 +10,7 @@ USER="apache"
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://mirror.crexio.com/almalinux/"
+SOURCE="rsync://rsync.repo.almalinux.org/almalinux/"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
@@ -28,6 +28,8 @@ rsync --exclude 'isos' \
     --exclude '8.*-rc' \
     --exclude 'i386*' \
     --exclude 'aarch64'	\
+    --exclude 'ppc64le'	\
+    --exclude 's390x'	\
     --exclude 'Source'	\
     --exclude 'debug'	\
     --delete-excluded \
