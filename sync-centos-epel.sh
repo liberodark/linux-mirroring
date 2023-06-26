@@ -10,7 +10,7 @@ USER="apache"
 # the rsync call below
 BWLIMIT=10000
 
-SOURCE="rsync://mir01.syntis.net/epel"
+SOURCE="rsync://fr2.rpmfind.net/linux/epel"
 
 [ ! -d "${TARGET}" ] && mkdir -p "${TARGET}"
 [ ! -d "${TMP}" ] && mkdir -p "${TMP}"
