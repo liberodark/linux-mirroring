@@ -34,10 +34,11 @@ Put in crontab :
 Name | Arch | Size | Version | Status
 ---------------- |:------:|:---------:|:--------------:|:-------------:
 **sync-manjaro.sh** | x86_64 | 91 Go | Stable | Work
-**sync-debian.sh** | x86_64 | 483 Go | All | Work
-**sync-debian-security.sh** | x86_64 | 45 Go | All | Work
-**sync-centos.sh** | x86_64| 109 Go | 7 | Work
-**sync-centos-epel.sh** | x86_64| 16 Go | 7/8 | Work
+**sync-debian.sh** | x86_64 | 624 Go | All | Work
+**sync-debian-security.sh** | x86_64 | 61 Go | All | Work
+**sync-centos.sh** | x86_64| 433 Go | 7/8 | Work
+**sync-alma.sh** | x86_64| 173 Go | 8/9 | Work
+**sync-centos-epel.sh** | x86_64| 30 Go | 7/8 | Work
 
 
 ### Exemple of Linux Repo
