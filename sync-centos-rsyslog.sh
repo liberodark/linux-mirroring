@@ -25,8 +25,8 @@ wget --mirror \
     --exclude-directories=epel-5 \
     --exclude-directories=epel-6 \
     --exclude-directories=i386 \
-    ${SOURCE}
+    ${SOURCE} || exit
 rm -f rpms.adiscon.com/rsyslog.repo
 rm -rf rpms.adiscon.com/index.html*
 popd || exit
-chown -R "$USER":"$USER" "$HOME"
+chown -R "$USER":"$USER" "$HOME" || exit

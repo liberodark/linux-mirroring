@@ -39,10 +39,11 @@ rsync --exclude '4' \
     --exclude 'ppc64le' \
     --exclude 's390x' \
     --exclude 'debug' \
+    --exclude 'source' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
-    --bwlimit=${BWLIMIT} \
+    --bwlimit="${BWLIMIT}" \
     --delete-after --progress \
     -h ${QUIET} \
     --timeout=600 \
@@ -50,7 +51,7 @@ rsync --exclude '4' \
     --delay-updates \
     --no-motd \
     --temp-dir="${TMP}" \
-    ${SOURCE} \
-    "${TARGET}"
+    "${SOURCE}" \
+    "${TARGET}" || exit
 
-chown -R "$USER":"$USER" "$HOME"
+chown -R "$USER":"$USER" "$HOME" || exit

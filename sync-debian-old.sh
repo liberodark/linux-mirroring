@@ -28,7 +28,7 @@ rsync -rtlvH --safe-links \
     -h ${QUIET} --timeout=600 --contimeout=120 -p \
     --delay-updates --no-motd \
     --temp-dir="${TMP}" \
-    ${SOURCE} \
-    "${TARGET}"
+    "${SOURCE}" \
+    "${TARGET}" || exit
 
-chown -R "$USER":"$USER" "$HOME"
+chown -R "$USER":"$USER" "$HOME" || exit

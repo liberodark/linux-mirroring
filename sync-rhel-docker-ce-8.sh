@@ -20,7 +20,7 @@ wget --mirror \
     ${SOURCE}
 
 pushd download.docker.com || exit
-sudo cp -a * "${TARGET}"
+sudo cp -a * "${TARGET}" || exit
 popd || exit
 sudo rm -r download.docker.com
-chown -R "$USER":"$USER" "$HOME"
+chown -R "$USER":"$USER" "$HOME" || exit

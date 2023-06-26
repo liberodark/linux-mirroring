@@ -17,10 +17,10 @@ flock -n 9 || exit
 wget --mirror \
     --no-parent \
     --cut-dirs=5 \
-    ${SOURCE}
+    ${SOURCE} || exit
 
 pushd download.docker.com || exit
 sudo cp -a * "${TARGET}"
 popd || exit
 sudo rm -r download.docker.com
-chown -R "$USER":"$USER" "$HOME"
+chown -R "$USER":"$USER" "$HOME" || exit

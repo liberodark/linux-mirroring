@@ -75,7 +75,7 @@ rsync --exclude 'source*' \
     --delete-excluded \
     -rtlvH \
     --safe-links \
-    --bwlimit=${BWLIMIT} \
+    --bwlimit="${BWLIMIT}" \
     --delete-after --progress \
     -h ${QUIET} \
     --timeout=600 \
@@ -83,7 +83,7 @@ rsync --exclude 'source*' \
     --delay-updates \
     --no-motd \
     --temp-dir="${TMP}" \
-    ${SOURCE} \
-    "${TARGET}"
+    "${SOURCE}" \
+    "${TARGET}" || exit
 
-chown -R "$USER":"$USER" "$HOME"
+chown -R "$USER":"$USER" "$HOME" || exit
